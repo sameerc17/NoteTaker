@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                 }
+                finish();
                 startActivity(intent);
             }
         });
@@ -68,10 +70,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, noteadd.class);
+                finish();
                 startActivity(intent);
             }
         });
-//        Intent i=getIntent();
-
     }
 }

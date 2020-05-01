@@ -33,9 +33,7 @@ public class noteupd extends AppCompatActivity {
             public void onClick(View view) {
                 db.update(t1.getText().toString(),t2.getText().toString());
                 Toast.makeText(noteupd.this,"Changes updated successfully",Toast.LENGTH_LONG).show();
-                Intent i=new Intent(noteupd.this,MainActivity.class);
-                startActivity(i);
-                finish();
+                leave();
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
@@ -43,8 +41,14 @@ public class noteupd extends AppCompatActivity {
             public void onClick(View view) {
                 db.delete(t1.getText().toString());
                 Toast.makeText(noteupd.this,"Note deleted",Toast.LENGTH_LONG).show();
-                finish();
+                leave();
             }
         });
+    }
+
+    private void leave() {
+        Intent i=new Intent(noteupd.this,MainActivity.class);
+        finish();
+        startActivity(i);
     }
 }

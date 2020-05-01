@@ -33,6 +33,7 @@ public class noteadd extends AppCompatActivity {
                 Toast.makeText(noteadd.this,"Note added successfully",Toast.LENGTH_LONG).show();
                 Intent i=new Intent(noteadd.this,MainActivity.class);
                 finish();
+                startActivity(i);
             }
         });
     }
